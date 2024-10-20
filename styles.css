@@ -20,8 +20,9 @@ html, body {
 }
 
 .top-image {
-    width: 100%;
-    height: auto;
+    width: 100vw; /* 画面全体の幅にフィット */
+    height: 100vh; /* 画面全体の高さにフィット */
+    object-fit: cover; /* 画像の縦横比を維持しながら全体に広げる */
     display: block;
     margin-bottom: 15px;
 }
