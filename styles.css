@@ -29,7 +29,7 @@ html, body {
 
 /* The main ticket container */
 .ticket-container {
-    max-width: 350px;
+    max-width: 340px;
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
