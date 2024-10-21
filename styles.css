@@ -1,15 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0px;
-    box-sizing: border-box;
+    padding: 20px;
     background-color: #ffffff;
-}
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
 }
 
 /* Top Image Container */
@@ -19,16 +12,15 @@ html, body {
 }
 
 .top-image {
-    width: 100vw; /* 画面全体の幅にフィット */
-    height: 100vh; /* 画面全体の高さにフィット */
-    object-fit: cover; /* 画像の縦横比を維持しながら全体に広げる */
+    width: 100%;
+    height: auto;
     display: block;
     margin-bottom: 15px;
 }
 
 /* The main ticket container */
 .ticket-container {
-    max-width: 340px;
+    max-width: 350px;
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
@@ -142,7 +134,7 @@ html, body {
 
 /* Style for the ticket code */
 .ticket-code {
-    color: #5e5d64;
+    color: #6a6971;
     font-size: 14px;
     margin-left: 10px !important;
 }
@@ -159,21 +151,12 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.rubyposition_under{
-  display: inline-block;
-}
-.rubyposition_under ruby{
-  display: flex;
-  flex-direction: column;
-}
-.rubyposition_under rt {
-  font-size: 0.7em; /* ふりがなのフォントサイズを調整 */
-  margin-top: -2px;  /* 名前との間の間隔を調整 */
-  margin-left: 0.5px;
-}
-.rubyposition_under ruby {
-  position: relative;
-  top: -3.5px; /* 名前の位置を少し上に調整 */
+
+.furigana {
+  margin-top: -30px; /* 調整したい場合は、この値を変えてください */
+  margin-left: 50px !important;
+  font-size: 0.5em; /* フリガナを少し小さめに表示する */
+  color: #666; /* フリガナの色を薄めにする */
 }
 
 /* General icon styling */
@@ -183,10 +166,9 @@ html, body {
 }
 
 .ticket-icon {
-    width: 18px;
-    height: 18px;
-    margin: 2px;
-    margin-left: 150px;
+    width: 15px;
+    height: 15px;
+    margin: -3px 0 0 0;
 }
 
 /* ID Card icon (for "入場口へお進みください") */
@@ -201,7 +183,7 @@ html, body {
     width: 20px;
     height: 18px;
     margin-left: 0.4px;
-    margin-right: 9px;
+    margin-right: 2px;
 }
 
 /* Seat icon (for "座席は入場後に表示されます") */
@@ -210,7 +192,6 @@ html, body {
     height: 18px;
     vertical-align: middle;
     margin-left: -0.3px;
-    margin-right: 7.5px;
 }
 
 .people-icon {
@@ -218,7 +199,6 @@ html, body {
     height: 18px;
     vertical-align: middle;
     margin-left: -2px;
-    margin-right: 8px;
 }
 .custom-line {
     border: none;
