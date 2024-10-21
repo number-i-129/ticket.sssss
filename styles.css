@@ -1,30 +1,31 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0px;
+    padding: 0;
     background-color: #ffffff;
 }
 
 /* Top Image Container */
 .top-image-container {
     max-width: 100%;
+    overflow: hidden; /* 画面いっぱいに表示するためにオーバーフローを隠す */
 }
 
 .top-image {
-    width: 100%;
-    height: auto;
+    width: 100vw; /* 画面の横幅を100%に */
+    height: auto; /* 高さは自動調整 */
     display: block;
-    margin-bottom: 15px;
 }
 
 /* The main ticket container */
 .ticket-container {
     max-width: 350px;
-    margin: 0 auto;
+    margin: 0 auto; /* ページ中央に配置 */
     background-color: white;
     border-radius: 10px;
     padding: 15px;
     border: 1px solid #ddd;
+    box-sizing: border-box; /* 余白やボーダーを含めてサイズを計算 */
 }
 
 /* Header with image and title */
@@ -58,41 +59,40 @@ body {
 /* Time section for OPEN and START labels */
 .event-time {
     display: flex;
-    justify-content: space-between; /* Split the boxes equally */
+    justify-content: space-between;
     font-size: 15px;
-    gap: 15px; /* Space between the boxes */
-    margin-bottom: 2px; /* Add space between the boxes and the time */
+    gap: 15px;
+    margin-bottom: 2px;
 }
 
-/* Each timing box */
 .timing-box {
-    flex: 1; /* Ensure both boxes take equal width */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Center the label inside */
+    justify-content: center;
     align-items: center;
     padding: 1px;
     border-radius: 2px;
-    background-color: #ececec; /* Optional: Light background */
+    background-color: #ececec;
 }
 
-/* Time details below the boxes */
 .event-time-details {
     display: flex;
-    justify-content: space-between; /* Align times below the respective boxes */
-    gap: 15px; /* Space between the times */
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .time {
     flex: 1;
-    text-align: center; /* Center the time text */
-    font-size: 16px;    /* Adjust the time font size */
-    color: #333;        /* Optional: Time color */
+    text-align: center;
+    font-size: 16px;
+    color: #333;
     margin-bottom: 16px;
 }
+
 /* Add a border around the entire section from entry-info down */
 .content-wrapper {
     border: 1px solid #d7d7d7;
-    padding: 0; /* Remove padding to bring content closer to the border */
+    padding: 0;
     border-radius: 8px;
     background-color: #ffffff;
 }
@@ -102,7 +102,7 @@ body {
     background-color: #f0f9ff;
     border-radius: 4px;
     padding: 7px;
-    margin: 0; /* Remove margin to make it touch the content-wrapper border */
+    margin: 0;
     font-size: 15px;
     color: #3a7cb9;
     line-height: 1.2;
@@ -113,7 +113,7 @@ body {
 .ticket-details {
     font-size: 14px;
     color: #333;
-    margin-top: 13px; /* Add margin to separate it from the entry-info */
+    margin-top: 13px;
     margin-bottom: 1px;
 }
 
@@ -128,7 +128,7 @@ body {
     color: #333;
     margin-bottom: 10px;
     margin-left: 10px !important;
-    margin-top: 15px; /* Add margin to separate from the above content */
+    margin-top: 15px;
 }
 
 /* Style for the ticket code */
@@ -145,17 +145,11 @@ body {
     margin-left: 18px !important;
 }
 
-/* Icon and text inside entry-info */
-.entry-info p {
-    margin: 0;
-    padding: 0;
-}
-
 .furigana {
-  margin-top: -30px; /* 調整したい場合は、この値を変えてください */
+  margin-top: -30px;
   margin-left: 50px !important;
-  font-size: 0.5em; /* フリガナを少し小さめに表示する */
-  color: #666; /* フリガナの色を薄めにする */
+  font-size: 0.5em;
+  color: #666;
 }
 
 /* General icon styling */
@@ -167,17 +161,15 @@ body {
 .ticket-icon {
     width: 15px;
     height: 15px;
-    margin: -3px 0 0 0;
+    margin: -3px 0 0;
 }
 
-/* ID Card icon (for "入場口へお進みください") */
 .id-card-icon {
     width: 30px;
     height: 30px;
     margin: -3px 0 0 0;
 }
 
-/* Gate icon (for "入場口: Uゲート") */
 .gate-icon {
     width: 20px;
     height: 18px;
@@ -185,7 +177,6 @@ body {
     margin-right: 2px;
 }
 
-/* Seat icon (for "座席は入場後に表示されます") */
 .seat-icon {
     width: 22px;
     height: 18px;
@@ -199,24 +190,24 @@ body {
     vertical-align: middle;
     margin-left: -2px;
 }
+
 .custom-line {
     border: none;
     border-top: 0.7px solid #ddd;
-    width: 90%;  /* 境界線の幅を90%に設定 */
-    margin: 10px auto;  /* 上下に10pxの余白、左右を自動で中央寄せ */
+    width: 90%;
+    margin: 10px auto;
 }
 
 /* Notice */
 .notice {
-    font-size: 12px; /* Smaller font size */
+    font-size: 12px;
     color: #000000;
-    margin: 15px 10px; /* Add margin to create space between the notice and the content-wrapper */
+    margin: 15px 10px;
     background-color: #f3f3f3;
-    padding: 5px 10px; /* Smaller padding inside the notice */
+    padding: 5px 10px;
     border-radius: 10px;
 }
 
-/* Align wrapped lines in notice text */
 .notice-text {
     text-indent: -0.7em;
     padding-left: 0.8em;
@@ -229,23 +220,21 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 15px 10px; /* Add margin to create space between buttons and the content-wrapper */
+    margin: 15px 10px;
 }
 
 .action-buttons button {
-    padding: 5px 10px; /* Smaller padding for the buttons */
-    font-size: 12px; /* Smaller font size */
-    border-radius: 50px; /* Rounded corners */
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 50px;
 }
 
-/* Enter Button */
 .enter-btn {
     background-color: #4d57a9;
     color: white;
     border: 1px solid #4b4a4e;
 }
 
-/* Refund Button */
 .refund-btn {
     background-color: white;
     color: #4d57a9;
